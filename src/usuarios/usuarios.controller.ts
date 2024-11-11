@@ -18,6 +18,10 @@ export class UsuariosController {
     return this.usuariosService.obtenerUsuarioPorId(+id);
   }
 
+  @Get()
+  obtenerTodosLosUsuarios(): Usuario[] {
+    return this.usuariosService.obtenerTodosLosUsuarios();
+  }
   // Actualizar un usuario por su ID
   @Put(':id')
   actualizarUsuario(@Param('id') id: number, @Body() usuarioActualizado: Usuario): Usuario {
